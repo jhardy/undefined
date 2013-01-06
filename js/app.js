@@ -97,8 +97,4 @@ function MeetupCtrl($scope) {
 			'slides': 			''
 		}
 	];
-
-	this.getIndex = function(index) {
-			console.log(index)
-		}
 }
