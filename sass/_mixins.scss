@@ -1,0 +1,38 @@
+@mixin down-arrow {
+		&:before {
+		content: "";
+		display: block;
+		width: image-width('arrow-down.png');
+		height: image-height('arrow-down.png');
+		background: image-url('arrow-down.png');
+		margin: 0 auto;
+	}
+}
+
+@mixin up-arrow {
+	&:after {
+		content: "";
+		display: block;
+		width: image-width('arrow-up.png');
+		height: image-height('arrow-up.png');
+		background: image-url('arrow-up.png');
+		margin: 0 auto;
+	}
+}
+
+@mixin section-arrows {
+	@include down-arrow;
+	@include up-arrow;
+}
+
+.cf {
+	&:before,
+	&:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+	}	
+
+	&:after {
+    clear: both;
+	}
+}

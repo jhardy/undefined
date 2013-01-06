@@ -1,0 +1,19 @@
+<span class="label red">Next Meetup</span>
+
+<div class="meetup-info">
+	<h4>{{meetup.title}}</h4>
+	<address>by <a ng-href="{{meetup.speaker.url}}" rel="author">{{meetup.speaker.name}}</a></address>
+
+	<p>{{meetup.description}}</p>
+</div>
+
+<div class="meetup-location">
+	<time class="meetup-date">
+		{{meetup.date.month}} {{meetup.date.day}}
+		<span class="year">{{meetup.date.year}}</span>
+	</time>
+
+	<span class="vcard"><a ng-href="{{meetup.location.mapURL}}" class="fn org url"><i class="icon-location"></i> {{meetup.location.name}}</a></span>
+	<time class="meetup-time"><i class="icon-clock"></i>{{meetup.date.time}}</time>
+
+</div>

@@ -1,0 +1,11 @@
+<span class="label blue">
+	<time>
+		{{meetup.date.month}} {{meetup.date.day}}, {{meetup.date.year}}
+	</time>
+</span>
+
+<div class="meetup-info">
+	<h5>{{meetup.title}}</h5>
+	<address>by <a ng-href="{{meetup.speaker.url}}" rel="author">{{meetup.speaker.name}}</a></address>
+	<i class="icon-eye"></i><a class="slide-link" ng-href="{{slides}}">View Slides</a>
+</div>
