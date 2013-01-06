@@ -40,7 +40,7 @@ function MeetupCtrl($scope) {
 			'slides': 			''
 		},
 				{
-			'title': 				'How we messed up a large project using python',
+			'title': 				'How we messed up a large project using Ruby',
 			'speaker': 			{
 											'name': 'Joel Holdbrooks', 
 											'url': 'https://github.com/noprompt',
