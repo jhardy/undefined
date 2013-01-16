@@ -38,7 +38,7 @@
 			<section ng-repeat="meetup in meetups">
 
 				<section ng-switch on="$index" ng-class-odd="'odd'" ng-class-even="'even'">
-					<article ng-switch-when="0" ng-include src="'templates/next-event.html'" class="next-event event"></article>
+					<article ng-switch-when="0" ng-include src="'templates/next-event.html'" id="next-event" class="next-event event"></article>
 					<article ng-switch-default ng-include src="'templates/past-event.html'" class="past-event event"></article>
 				</section>
 
@@ -116,11 +116,10 @@
 				</li>
 			</ul>
 		</div>
-
-		<div class="test-icons">
-
-		</div>
 	</section>
 
+	<footer>
+		Opinionated robust powerful site powered by electricity &copy; 2013
+	</footer>
 </body>
 </html>
