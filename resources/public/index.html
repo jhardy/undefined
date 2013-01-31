@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en-US" ng-app>
+<html lang="en-US" ng-app="undefin">
 <head>
 	<meta charset="UTF-8">
 	<title>Undefined - Development and Design Meetup</title>
@@ -8,7 +8,9 @@
 
 	<script type="text/javascript" src="//use.typekit.net/ubz5bxv.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+	<script type="text/javascript" src="javascripts/underscore-min.js"></script>
+	<script type="text/javascript" src="javascripts/angular.min.js"></script>
+	<script type="text/javascript" src="javascripts/angular-resource.min.js"></script>
 	<script type="text/javascript" src="javascripts/app.js"></script>
 
 </head>
@@ -46,76 +48,44 @@
 		</div>
 	</section>
 
-
-
-	<section class="members">
+	<section class="members" ng-controller="MembersCtrl">
 		<h3>Members</h3>
 
+    <!-- TODO: Move this in to a template so it can be reused. -->
 		<div class="content">
 			<h4>Founders</h4>
-			<ul class="founders">
-				<li>
+      <ul>
+				<li ng-repeat="founder in founders">
 					<div class="member-detail">
-						<img src="images/founders/joel.png" alt="Joel Holdbrooks" />
+            <img ng-src="{{ gravatarUrl(founder) }}" alt="{{ founder.name }}" />
 						<div class="links">
-							<a href=""><i aria-hidden="true" class="icon-twitter"></i></a>
-							<a href=""><i aria-hidden="true" class="icon-github"></i></a>
-							<a href=""><i aria-hidden="true" class="icon-dribbble"></i></a>
+              <a href="{{ twitterUrl(founder) }}"><i aria-hidden="true" class="icon-twitter"></i></a>
+							<a href="{{ githubUrl(founder) }}"><i aria-hidden="true" class="icon-github"></i></a>
+							<a href="{{ dribbbleUrl(founder) }}"><i aria-hidden="true" class="icon-dribbble"></i></a>
 						</div>
 					</div>
-
-					<span>Joel Holdbrooks</span>
-				</li>
-
-				<li>
-					<div class="member-detail">
-						<img src="images/founders/justin.png" alt="Justin Gable" />
-						<div class="links">
-							<a href=""><i aria-hidden="true" class="icon-twitter"></i></a>
-							<a href=""><i aria-hidden="true" class="icon-github"></i></a>
-							<a href=""><i aria-hidden="true" class="icon-dribbble"></i></a>
-						</div>
-					</div>
-					<span>Justin Gable</span>
-				</li>
-
-				<li>
-					<div class="member-detail">
-						<img src="images/founders/andres.png" alt="Andres Lopes" />
-						<div class="links">
-							<a href=""><i aria-hidden="true" class="icon-twitter"></i></a>
-							<a href=""><i aria-hidden="true" class="icon-github"></i></a>
-							<a href=""><i aria-hidden="true" class="icon-dribbble"></i></a>
-						</div>
-					</div>
-					<span>Andres Lopez</span>
-				</li>
-
-				<li>
-					<div class="member-detail">
-						<img src="images/founders/sebastian.png" alt="Sebastian Dieser" />
-						<div class="links">
-							<a href=""><i aria-hidden="true" class="icon-twitter"></i></a>
-							<a href=""><i aria-hidden="true" class="icon-github"></i></a>
-							<a href=""><i aria-hidden="true" class="icon-dribbble"></i></a>
-						</div>
-					</div>
-					<span>Sebastian Dieser</span>
-				</li>
-
-				<li>
-					<div class="member-detail">
-						<img src="images/founders/jared.png" alt="Jared Hardy" />
-						<div class="links">
-							<a href=""><i aria-hidden="true" class="icon-twitter"></i></a>
-							<a href=""><i aria-hidden="true" class="icon-github"></i></a>
-							<a href=""><i aria-hidden="true" class="icon-dribbble"></i></a>
-						</div>
-					</div>
-					<span>Jared Hardy</span>
+          <span>{{ founder.name }}</span>
 				</li>
 			</ul>
 		</div>
+
+		<div class="content">
+			<h4>Members</h4>
+      <ul>
+				<li ng-repeat="member in members">
+					<div class="member-detail">
+            <img ng-src="{{ gravatarUrl(member) }}" alt="{{ member.name }}" />
+						<div class="links">
+              <a href="{{ twitterUrl(member) }}"><i aria-hidden="true" class="icon-twitter"></i></a>
+							<a href="{{ githubUrl(member) }}"><i aria-hidden="true" class="icon-github"></i></a>
+							<a href="{{ dribbbleUrl(member) }}"><i aria-hidden="true" class="icon-dribbble"></i></a>
+						</div>
+					</div>
+          <span>{{ member.name }}</span>
+				</li>
+			</ul>
+		</div>
+
 	</section>
 
 	<footer>

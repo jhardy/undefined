@@ -685,16 +685,16 @@ h5 {
   padding: 30px 0;
   text-align: center;
 }
-.members .founders {
+.members ul {
   list-style-type: none;
   padding: 0;
 }
-.members .founders li {
+.members ul li {
   width: 20%;
   margin-bottom: 20px;
   float: left;
 }
-.members .founders span {
+.members ul span {
   display: block;
 }
 
@@ -702,7 +702,6 @@ h5 {
   position: relative;
   width: 150px;
   height: 150px;
-  background: #1a2a31;
   border-radius: 10em;
   -webkit-transform: scale(0.8, 0.8);
   -moz-transform: scale(0.8, 0.8);
@@ -722,8 +721,14 @@ h5 {
   -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  -ms-border-radius: 75px;
+  -o-border-radius: 75px;
+  border-radius: 75px;
 }
 .member-detail:hover {
+  background: #1a2a31;
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
