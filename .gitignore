@@ -1,3 +1,22 @@
+# Clojure
+/target
+/lib
+/classes
+/checkouts
+pom.xml
+*.jar
+*.class
+.lein-deps-sum
+.lein-failures
+.lein-plugins
+.lein-env
+
+# Sass
 /.sass-cache/*
+
+# Ignore Mac OS X .DS_Store files.
 *.DS_STORE
+
+# Ignore Vim swap files.
 *.swp
+

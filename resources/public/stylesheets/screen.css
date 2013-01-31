@@ -447,7 +447,7 @@ table {
 }
 
 body {
-  background: url('../images/body.jpg?1358211552') #dee0e3;
+  background: url('../images/body.jpg?1359615091') #dee0e3;
   color: #4b4542;
   font-family: "proxima-nova", sans-serif;
   line-height: 1.5;
@@ -496,7 +496,7 @@ h5 {
 .intro {
   color: #fff;
   text-transform: uppercase;
-  background: url('../images/hero.jpg?1358211553') no-repeat center center #24323d;
+  background: url('../images/hero.jpg?1359615091') no-repeat center center #24323d;
   text-align: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -532,7 +532,7 @@ h5 {
   display: block;
   width: 73px;
   height: 35px;
-  background: url('../images/arrow-up.png?1358211552');
+  background: url('../images/arrow-up.png?1359615091');
   margin: 0 auto;
 }
 
@@ -549,7 +549,7 @@ h5 {
 }
 
 .meetups {
-  background: url('../images/meetup.jpg?1358211552') #e4e4e4;
+  background: url('../images/meetup.jpg?1359615091') #e4e4e4;
 }
 .meetups .even .event {
   margin-right: 4%;
@@ -669,7 +669,7 @@ h5 {
   display: block;
   width: 73px;
   height: 35px;
-  background: url('../images/arrow-down.png?1358211552');
+  background: url('../images/arrow-down.png?1359615091');
   margin: 0 auto;
 }
 .meetups:after {
@@ -677,7 +677,7 @@ h5 {
   display: block;
   width: 73px;
   height: 35px;
-  background: url('../images/arrow-up.png?1358211552');
+  background: url('../images/arrow-up.png?1359615091');
   margin: 0 auto;
 }
 
