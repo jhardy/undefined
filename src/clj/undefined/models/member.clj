@@ -37,3 +37,9 @@
     :github "dmpayton"
     :dribbble nil
     :founder false}])
+
+(defn find-by-name
+  ([name]
+    (filter #(= name (:name %)) all))
+  ([name & more]
+   (apply conj (find-by-name name) (flatten (map find-by-name more)))))
