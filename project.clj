@@ -4,7 +4,8 @@
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [org.clojure/data.json "0.2.1"]
                  [compojure "1.1.5"]
-                 [hiccup "1.0.2"]]
+                 [hiccup "1.0.2"]
+                 [clj-time "0.4.4"]]
   :plugins [[lein-ring "0.8.2"]]
   :source-paths ["src/clj"]
   :ring {:handler undefined.handler/app}
