@@ -6,6 +6,10 @@
 
 <div class="meetup-info">
 	<h5>{{meetup.title}}</h5>
-	<address>by <a ng-href="{{meetup.speaker.url}}" rel="author">{{meetup.speaker.name}}</a></address>
+	<address>with
+    <span ng-repeat="speaker in meetup.speakers">
+      <a ng-href="{{speakerUrl(speaker)}}" rel="author">{{speaker.name}}</a>
+    </span>
+  </address>
 	<i class="icon-eye"></i><a class="slide-link" ng-href="{{slides}}">View Slides</a>
 </div>

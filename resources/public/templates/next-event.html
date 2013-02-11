@@ -2,7 +2,11 @@
 
 <div class="meetup-info">
 	<h4>{{meetup.title}}</h4>
-	<address>by <a ng-href="{{meetup.speaker.url}}" rel="author">{{meetup.speaker.name}}</a></address>
+	<address>with
+    <span ng-repeat="speaker in meetup.speakers">
+      <a ng-href="{{speakerUrl(speaker)}}" rel="author">{{speaker.name}}</a>
+    </span>
+  </address>
 
 	<p>{{meetup.description}}</p>
 </div>
