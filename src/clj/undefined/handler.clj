@@ -7,6 +7,7 @@
             [compojure.route :as route]
             [ring.util.response :as resp]
             [clojure.data.json :as json]
+            [clojure.java.io :as io]
             [undefined.models.member :as member]
             [undefined.models.meetup :as meetup]))
 
@@ -20,13 +21,17 @@
   (GET "/meetups.json" [] (json-response meetup/all)))
 
 (defroutes app-routes
-  ;; SEE: api-routes
   (context "/api" [] api-routes)
 
-  (GET "/" []
-    (resp/resource-response "index.html" {:root "public"}))
-
   (route/resources "/")
+
+  ;; HACK: tomcat6 seems to have a problem with using (io/resource ...) as it
+  ;; ends up serving the file as text/plain. This forces the appropriate
+  ;; response.
+  (GET "/*" []
+    {:status 200
+     :headers {"Content-Type" "text/html"}
+     :body (slurp (io/resource "public/index.html"))})
 
   (route/not-found "Not Found"))
 
