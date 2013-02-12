@@ -42,4 +42,4 @@
   ([name]
     (filter #(= name (:name %)) all))
   ([name & more]
-   (apply conj (find-by-name name) (flatten (map find-by-name more)))))
+   (mapcat find-by-name (cons name more))))
