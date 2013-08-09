@@ -6,8 +6,9 @@
                  [compojure "1.1.5"]
                  [hiccup "1.0.2"]
                  [clj-time "0.4.4"]]
-  :plugins [[lein-ring "0.8.2"]]
+  :plugins [[lein-ring "0.8.6"]]
   :source-paths ["src/clj"]
   :ring {:handler undefined.handler/app}
   :profiles
-  {:dev {:dependencies [[ring-mock "0.1.3"]]}})
+  {:dev {:dependencies [[ring-mock "0.1.3"]]
+         :ring {:nrepl {:start? true}}}})
