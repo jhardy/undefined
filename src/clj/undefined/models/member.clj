@@ -36,12 +36,6 @@
     :twitter "dmpayton"
     :github "dmpayton"
     :dribbble nil
-    :founder false}
-    {:name "All"
-    :gravatar nil
-    :twitter nil
-    :github nil
-    :dribbble nil
     :founder false}])
 
 (defn find-by-name

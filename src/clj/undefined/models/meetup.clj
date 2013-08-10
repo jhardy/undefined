@@ -9,7 +9,7 @@
     :date (str (date-time 2013 8 13 19))
     :location {:name "Bitwise"
                :map "https://maps.google.com/maps?q=fresno+hashtag&ie=UTF-8&ei=6GD0UN7ZOOHf2QWDooHgDg&ved=0CAsQ_AUoAA"}
-    :speakers (member/find-by-name "All")}
+    :speakers (member/find-by-name "")}
   {:title "Using Clojure"
     :description "Clojure is a dynamic, functional programming language built for concurrency and runs on the JVM. It is an incredibly well designed language and emphasizes practicality and simplicity. Joel discusses the rational behind the language, motivations for using it, and how to get started."
     :slides nil
