@@ -6,7 +6,7 @@
                  [compojure "1.1.5"]
                  [hiccup "1.0.2"]
                  [clj-time "0.4.4"]]
-  :plugins [[lein-ring "0.8.6"]]
+  :plugins [[lein-ring "0.8.2"]]
   :source-paths ["src/clj"]
   :ring {:handler undefined.handler/app}
   :profiles
